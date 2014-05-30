@@ -22,6 +22,12 @@
 		6B04579A193643F3002C7466 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B04577E193643F3002C7466 /* CoreData.framework */; };
 		6B0457A2193643F3002C7466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B0457A0193643F3002C7466 /* InfoPlist.strings */; };
 		6B0457A4193643F3002C7466 /* weatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0457A3193643F3002C7466 /* weatherAppTests.m */; };
+		6B0457AE19364415002C7466 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0457AD19364415002C7466 /* Storyboard.storyboard */; };
+		6B0457B119364661002C7466 /* tabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0457B019364661002C7466 /* tabbarViewController.m */; };
+		6B0457B4193646A5002C7466 /* huidigweerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0457B3193646A5002C7466 /* huidigweerViewController.m */; };
+		6B0457B7193646B5002C7466 /* voorspellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0457B6193646B5002C7466 /* voorspellingViewController.m */; };
+		6BECE05F1937F7CC000B3E46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BECE05E1937F7CC000B3E46 /* MapKit.framework */; };
+		6BECE0611937F83E000B3E46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BECE0601937F83E000B3E46 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,15 @@
 		6B04579F193643F3002C7466 /* weatherAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "weatherAppTests-Info.plist"; sourceTree = "<group>"; };
 		6B0457A1193643F3002C7466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6B0457A3193643F3002C7466 /* weatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = weatherAppTests.m; sourceTree = "<group>"; };
+		6B0457AD19364415002C7466 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		6B0457AF19364661002C7466 /* tabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabbarViewController.h; sourceTree = "<group>"; };
+		6B0457B019364661002C7466 /* tabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabbarViewController.m; sourceTree = "<group>"; };
+		6B0457B2193646A5002C7466 /* huidigweerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = huidigweerViewController.h; sourceTree = "<group>"; };
+		6B0457B3193646A5002C7466 /* huidigweerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = huidigweerViewController.m; sourceTree = "<group>"; };
+		6B0457B5193646B5002C7466 /* voorspellingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voorspellingViewController.h; sourceTree = "<group>"; };
+		6B0457B6193646B5002C7466 /* voorspellingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voorspellingViewController.m; sourceTree = "<group>"; };
+		6BECE05E1937F7CC000B3E46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6BECE0601937F83E000B3E46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BECE0611937F83E000B3E46 /* CoreLocation.framework in Frameworks */,
+				6BECE05F1937F7CC000B3E46 /* MapKit.framework in Frameworks */,
 				6B04577B193643F3002C7466 /* CoreGraphics.framework in Frameworks */,
 				6B04577F193643F3002C7466 /* CoreData.framework in Frameworks */,
 				6B04577D193643F3002C7466 /* UIKit.framework in Frameworks */,
@@ -103,6 +120,8 @@
 		6B045777193643F3002C7466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BECE0601937F83E000B3E46 /* CoreLocation.framework */,
+				6BECE05E1937F7CC000B3E46 /* MapKit.framework */,
 				6B045778193643F3002C7466 /* Foundation.framework */,
 				6B04577A193643F3002C7466 /* CoreGraphics.framework */,
 				6B04577C193643F3002C7466 /* UIKit.framework */,
@@ -115,6 +134,13 @@
 		6B045780193643F3002C7466 /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B0457B2193646A5002C7466 /* huidigweerViewController.h */,
+				6B0457B3193646A5002C7466 /* huidigweerViewController.m */,
+				6B0457B5193646B5002C7466 /* voorspellingViewController.h */,
+				6B0457B6193646B5002C7466 /* voorspellingViewController.m */,
+				6B0457AF19364661002C7466 /* tabbarViewController.h */,
+				6B0457B019364661002C7466 /* tabbarViewController.m */,
+				6B0457AD19364415002C7466 /* Storyboard.storyboard */,
 				6B045789193643F3002C7466 /* AppDelegate.h */,
 				6B04578A193643F3002C7466 /* AppDelegate.m */,
 				6B04578F193643F3002C7466 /* Images.xcassets */,
@@ -230,6 +256,7 @@
 			files = (
 				6B045785193643F3002C7466 /* InfoPlist.strings in Resources */,
 				6B045790193643F3002C7466 /* Images.xcassets in Resources */,
+				6B0457AE19364415002C7466 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0457B119364661002C7466 /* tabbarViewController.m in Sources */,
 				6B04578B193643F3002C7466 /* AppDelegate.m in Sources */,
 				6B04578E193643F3002C7466 /* weatherApp.xcdatamodeld in Sources */,
 				6B045787193643F3002C7466 /* main.m in Sources */,
+				6B0457B7193646B5002C7466 /* voorspellingViewController.m in Sources */,
+				6B0457B4193646A5002C7466 /* huidigweerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +481,7 @@
 				6B0457A9193643F3002C7466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B0457AA193643F3002C7466 /* Build configuration list for PBXNativeTarget "weatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +490,7 @@
 				6B0457AC193643F3002C7466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
