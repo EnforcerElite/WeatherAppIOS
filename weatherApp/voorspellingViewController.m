@@ -116,6 +116,14 @@
                              double tempd1d = [tabbarViewController kelvinToCelsius:([tempd1 doubleValue])];
                              self.tempD1.text = [NSString stringWithFormat:@"%.00f", tempd1d];
                              
+                             NSString * tempmind1 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:0]];
+                             double tempmindd1d = [tabbarViewController kelvinToCelsius:([tempmind1 doubleValue])];
+                             self.tempMinD1.text = [NSString stringWithFormat:@"%.00f", tempmindd1d];
+                             
+                             NSString * tempmaxd1 = [NSString stringWithFormat:@"%@",[tempMax objectAtIndex:0]];
+                             double tempmaxd1d = [tabbarViewController kelvinToCelsius:([tempmaxd1 doubleValue])];
+                             self.tempMaxD1.text = [NSString stringWithFormat:@"%.00f", tempmaxd1d];
+                             
                              //huidige temp
                              NSArray *temp_t =[[json valueForKey:@"main"] valueForKey:@"temp"];
                              //double temp =[tabbarViewController kelvinToCelsius:([temp_t doubleValue])];
