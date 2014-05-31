@@ -115,8 +115,8 @@
                              //dag2
 
                              NSString * tempmind2 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:1]];
-                             double tempmindd2d = [tabbarViewController kelvinToCelsius:([tempmind2 doubleValue])];
-                             self.tempMinD2.text = [NSString stringWithFormat:@"%.00f", tempmindd2d];
+                             double tempmind2d = [tabbarViewController kelvinToCelsius:([tempmind2 doubleValue])];
+                             self.tempMinD2.text = [NSString stringWithFormat:@"%.00f", tempmind2d];
                              
                              NSString * tempmaxd2 = [NSString stringWithFormat:@"%@",[tempMax objectAtIndex:1]];
                              double tempmaxd2d = [tabbarViewController kelvinToCelsius:([tempmaxd2 doubleValue])];
@@ -125,12 +125,12 @@
                              //dag3
 
                              NSString * tempmind3 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:2]];
-                             double tempmindd3d = [tabbarViewController kelvinToCelsius:([tempmind3 doubleValue])];
-                             self.tempMinD3.text = [NSString stringWithFormat:@"%.00f", tempmindd3d];
+                             double tempmind3d = [tabbarViewController kelvinToCelsius:([tempmind3 doubleValue])];
+                             self.tempMinD3.text = [NSString stringWithFormat:@"%.00f", tempmind3d];
                              
                              NSString * tempmaxd3 = [NSString stringWithFormat:@"%@",[tempMax objectAtIndex:2]];
                              double tempmaxd3d = [tabbarViewController kelvinToCelsius:([tempmaxd3 doubleValue])];
-                             self.tempMaxD3.text = [NSString stringWithFormat:@"%.00f", tempmaxd1d];
+                             self.tempMaxD3.text = [NSString stringWithFormat:@"%.00f", tempmaxd3d];
                              
                              
                              
