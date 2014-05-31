@@ -11,18 +11,12 @@
 @interface voorspellingViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *locatie;
-@property (weak, nonatomic) IBOutlet UILabel *tempD1;
 @property (weak, nonatomic) IBOutlet UILabel *tempMinD1;
 @property (weak, nonatomic) IBOutlet UILabel *tempMaxD1;
-@property (weak, nonatomic) IBOutlet UILabel *humidityD1;
-@property (weak, nonatomic) IBOutlet UILabel *tempD2;
 @property (weak, nonatomic) IBOutlet UILabel *tempMinD2;
 @property (weak, nonatomic) IBOutlet UILabel *tempMaxD2;
-@property (weak, nonatomic) IBOutlet UILabel *humidityD2;
-@property (weak, nonatomic) IBOutlet UILabel *tempD3;
 @property (weak, nonatomic) IBOutlet UILabel *tempMinD3;
 @property (weak, nonatomic) IBOutlet UILabel *tempMaxD3;
-@property (weak, nonatomic) IBOutlet UILabel *humidityD3;
 
 @end
 
@@ -104,18 +98,12 @@
                          {
                              self.locatie.text =[[json valueForKey:@"city"] valueForKey:@"name"];
                              
-                             NSArray *weer = [json valueForKey:@"list"];
-                             
-                             NSArray * temp = [[[json valueForKey:@"list"]valueForKey:@"temp"]valueForKey:@"day"];
                              NSArray * tempMin = [[[json valueForKey:@"list"]valueForKey:@"temp"]valueForKey:@"min"];
                              NSArray * tempMax = [[[json valueForKey:@"list"]valueForKey:@"temp"]valueForKey:@"max"];
-                             
                              NSArray * hum = [[json valueForKey:@"list"]valueForKey:@"humidity"];
                              
-                             NSString * tempd1 = [NSString stringWithFormat:@"%@",[temp objectAtIndex:0]];
-                             double tempd1d = [tabbarViewController kelvinToCelsius:([tempd1 doubleValue])];
-                             self.tempD1.text = [NSString stringWithFormat:@"%.00f", tempd1d];
-                             
+                             //dag1
+
                              NSString * tempmind1 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:0]];
                              double tempmindd1d = [tabbarViewController kelvinToCelsius:([tempmind1 doubleValue])];
                              self.tempMinD1.text = [NSString stringWithFormat:@"%.00f", tempmindd1d];
@@ -124,25 +112,26 @@
                              double tempmaxd1d = [tabbarViewController kelvinToCelsius:([tempmaxd1 doubleValue])];
                              self.tempMaxD1.text = [NSString stringWithFormat:@"%.00f", tempmaxd1d];
                              
-                             //huidige temp
-                             NSArray *temp_t =[[json valueForKey:@"main"] valueForKey:@"temp"];
-                             //double temp =[tabbarViewController kelvinToCelsius:([temp_t doubleValue])];
-                             //self.currentTemp.text=[NSString stringWithFormat:@"%.00f", temp];
+                             //dag2
+
+                             NSString * tempmind2 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:1]];
+                             double tempmindd2d = [tabbarViewController kelvinToCelsius:([tempmind2 doubleValue])];
+                             self.tempMinD2.text = [NSString stringWithFormat:@"%.00f", tempmindd2d];
                              
-                             //maximale temperatuur
-                            // NSString *temp_m = [[json valueForKey:@"main"] valueForKey:@"temp_max"];
-                            // double temp2 =[tabbarViewController kelvinToCelsius:([temp_m doubleValue])];
-                             //self.maxTemp.text=[NSString stringWithFormat:@"%.00f", temp2];
+                             NSString * tempmaxd2 = [NSString stringWithFormat:@"%@",[tempMax objectAtIndex:1]];
+                             double tempmaxd2d = [tabbarViewController kelvinToCelsius:([tempmaxd2 doubleValue])];
+                             self.tempMaxD2.text = [NSString stringWithFormat:@"%.00f", tempmaxd2d];
                              
-                             //minimale temperatuur
-                             //NSString *temp_mi = [[json valueForKey:@"main"] valueForKey:@"temp_min"];
-                             //double temp3 =[tabbarViewController kelvinToCelsius:([temp_mi doubleValue])];
-                            // self.minTemp.text=[NSString stringWithFormat:@"%.00f", temp3];
+                             //dag3
+
+                             NSString * tempmind3 = [NSString stringWithFormat:@"%@",[tempMin objectAtIndex:2]];
+                             double tempmindd3d = [tabbarViewController kelvinToCelsius:([tempmind3 doubleValue])];
+                             self.tempMinD3.text = [NSString stringWithFormat:@"%.00f", tempmindd3d];
                              
-                             //vochtigheid
-                            // NSString*temp_hum = [[json valueForKey:@"main"] valueForKey:@"humidity"];
-                             //long temp4 = [temp_hum longLongValue];
-                             //self.humidity.text = [NSString stringWithFormat:@"%d", temp4];
+                             NSString * tempmaxd3 = [NSString stringWithFormat:@"%@",[tempMax objectAtIndex:2]];
+                             double tempmaxd3d = [tabbarViewController kelvinToCelsius:([tempmaxd3 doubleValue])];
+                             self.tempMaxD3.text = [NSString stringWithFormat:@"%.00f", tempmaxd1d];
+                             
                              
                              
                              

@@ -50,4 +50,9 @@
     return kelvin;
 }
 
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+}
+
 @end
